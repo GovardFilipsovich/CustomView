@@ -19,6 +19,16 @@ class TemperatureView(context: Context, attrs: AttributeSet): View(context, attr
     private val size = 400f
     private val border_size = 30f
 
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        val minw = 400
+        val w = 420
+
+        val minh = 400
+        val h = 420
+
+        setMeasuredDimension(w, h)
+    }
+
     override fun onDraw(canvas: Canvas){
         drawBackGround(canvas)
         drawBorder(canvas)
